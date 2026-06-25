@@ -571,7 +571,7 @@ had encrypted with:
 encryption seed this save: 0xF3
 ```
 
-***There it is*** The **same number.** Not close — *identical*. The thing we'd been chasing as the
+***There it is*** --> The **same number.** Not close — *identical*. The thing we'd been chasing as the
 "encryption seed" and the thing the routine computes as the "integrity checksum" are **one
 and the same byte.** The seed was never random; it was the checksum of the party, staring
 at us the entire time. The save scheme, in full:
