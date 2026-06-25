@@ -1,0 +1,125 @@
+Wasteland (C64) — Inventory Item IDs
+====================================
+
+How items are stored
+--------------------
+Each item in a ranger's inventory is a 2-byte pair:  (id, ammo)
+  - id   = the item, encoded as  (Wasteland-1 string-table index) - 36
+  - ammo = loaded rounds for a weapon, otherwise 0 (each ammo/clip entry = 1 unit)
+
+The inventory list begins at offset 0xBD in the 256-byte character record and is
+null-terminated (a 0x00 id ends the list). The encryption seed lives at offset
+0xFF and is never part of the list.
+
+The "ID" column below is the byte you put in the inventory (already index-36).
+
+Weapons
+-------
+  0x01 (  1)  Ax
+  0x02 (  2)  Club
+  0x03 (  3)  Chainsaw
+  0x04 (  4)  Knife
+  0x05 (  5)  Proton ax
+  0x06 (  6)  Grenade
+  0x07 (  7)  Plastic explosive
+  0x08 (  8)  TNT
+  0x09 (  9)  Mangler
+  0x0a ( 10)  Sabot rocket
+  0x0b ( 11)  LAW rocket
+  0x0c ( 12)  RPG-7
+  0x0d ( 13)  M1911A1 45 pistol
+  0x0e ( 14)  Spear
+  0x0f ( 15)  Throwing knife
+  0x10 ( 16)  VP91Z 9mm pistol
+  0x11 ( 17)  Flamethrower
+  0x12 ( 18)  M17 carbine
+  0x13 ( 19)  M19 rifle
+  0x14 ( 20)  Red Ryder
+  0x15 ( 21)  Mac 17 SMG
+  0x16 ( 22)  Uzi SMG Mark 27
+  0x17 ( 23)  AK 97 assault rifle
+  0x18 ( 24)  M1989A1 Nato assault rifle
+
+Energy weapons (use Power packs)
+--------------------------------
+  0x19 ( 25)  Laser pistol
+  0x1a ( 26)  Ion beamer
+  0x1b ( 27)  Laser carbine
+  0x1c ( 28)  Laser rifle
+  0x1d ( 29)  Meson cannon
+
+Ammunition
+----------
+  0x1e ( 30)  45 clip
+  0x1f ( 31)  7.62mm clip
+  0x20 ( 32)  9mm clip
+  0x21 ( 33)  Howitzer shell
+  0x22 ( 34)  Power pack
+
+Armor
+-----
+  0x23 ( 35)  Power armor
+  0x24 ( 36)  Bullet proof shirt
+  0x25 ( 37)  Kevlar vest
+  0x26 ( 38)  Leather jacket
+  0x27 ( 39)  Kevlar suit
+  0x28 ( 40)  Pseudo-chitin armor
+  0x29 ( 41)  Rad suit
+  0x2a ( 42)  Robe
+
+General / tools
+---------------
+  0x2b ( 43)  Book
+  0x2c ( 44)  Canteen
+  0x2d ( 45)  Crowbar
+  0x2e ( 46)  Engine
+  0x2f ( 47)  Gas mask
+  0x30 ( 48)  Geiger counter
+  0x31 ( 49)  Hand mirror
+  0x32 ( 50)  Jug
+  0x33 ( 51)  Map
+  0x34 ( 52)  Match
+  0x35 ( 53)  Pick ax
+  0x36 ( 54)  Rope
+  0x37 ( 55)  Shovel
+  0x38 ( 56)  Sledge hammer
+  0x39 ( 57)  Snake squeezins
+  0x3a ( 58)  Android head
+  0x3b ( 59)  Antitoxin
+  0x3c ( 60)  Finster's head
+  0x3d ( 61)  Blackstar key
+  0x3e ( 62)  Bloodstaff
+  0x3f ( 63)  Bloodstaff (real)
+  0x40 ( 64)  Broken toaster
+  0x41 ( 65)  Chemical
+  0x42 ( 66)  Clone fluid
+  0x43 ( 67)  Visa card
+  0x44 ( 68)  Fusion cell
+  0x45 ( 69)  Grazer bat fetish
+
+Quest / keys / valuables
+------------------------
+  0x49 ( 73)  Nova key
+  0x4a ( 74)  Onyx ring
+  0x4b ( 75)  Passkey
+  0x4c ( 76)  Plasma coupler
+  0x4d ( 77)  Power converter
+  0x4e ( 78)  Pulsar key
+  0x4f ( 79)  Quasar key
+  0x50 ( 80)  Rom board
+  0x51 ( 81)  Room key #18
+  0x52 ( 82)  Ruby ring
+  0x53 ( 83)  Secpass 1
+  0x54 ( 84)  Secpass 3
+  0x55 ( 85)  Secpass 7
+  0x56 ( 86)  Secpass A
+  0x57 ( 87)  Secpass B
+  0x58 ( 88)  Servo motor
+  0x59 ( 89)  Sonic key
+  0x5a ( 90)  Toaster
+  0x5b ( 91)  Clay pot
+  0x5c ( 92)  Fruit
+  0x5d ( 93)  Jewelry
+  0x5e ( 94)  Cash
+
+Note: ids 0x46-0x48 (string-index 106-108) are blank/unused in the game table.
